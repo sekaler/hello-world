@@ -26,5 +26,6 @@ namespace StringFuncs
 			return dst;
 }
 //0.0
+//0000
 
 }
