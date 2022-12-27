@@ -1,0 +1,29 @@
+#include "pch.h"
+#include "StrStaticLib.h"
+#include <stdexcept>
+using namespace std;
+
+namespace StringFuncs
+{
+	char* MyStringFuncs::strcpy(const char* src)
+	{
+		//有效性检测
+		if (src == NULL)
+			return 0;
+		//计算src长度
+		int len = 0;
+		for (const char* p = src; *p != 0; p++) {
+			len++;
+		}
+		//申请len+1长度的内存空间
+		char* dst = (char*)malloc(sizeof(char*) * (len + 1));
+		//复制字符串
+		for (int i = 0; i < len; i++) {
+			dst[i] = src[i];
+		}
+			//字符结束末尾'/0'
+			dst[len] = '\0';
+			return dst;
+}
+
+}
